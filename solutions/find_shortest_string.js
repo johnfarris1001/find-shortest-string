@@ -10,12 +10,26 @@ function findShortestString(arr) {
 
   // return shortest;
 
-  return arr.reduce((shortest, string) => 
+  return arr.reduce((shortest, string) =>
     string.length < shortest.length ? string : shortest);
 }
 
 if (require.main === module) {
   // add your own tests in here
+  console.log("Expecting: 'houston'");
+  console.log("=>", findShortestString(['scranton', 'philadelphia', 'west lafayette', 'houston']));
+
+  console.log("");
+
+  console.log("Expecting: 'a'");
+  console.log("=>", findShortestString(['a']));
+
+  console.log("");
+
+  console.log("Expecting: 'tily'");
+  console.log("=>", findShortestString(['floatilla', 'tortilla', 'manilla', 'caterpilla', 'tily', 'stella', 'walnut', 'creek', 'afls']));
+
+  console.log("");
   console.log("Expecting: 'a'");
   console.log(findShortestString(['aaa', 'a', 'bb', 'ccc']));
 
@@ -50,11 +64,11 @@ module.exports = findShortestString;
 // Please add your pseudocode to this file
 /****************************************************************************
  * store the first string from the array in a variable called shortest
- * 
+ *
  * iterate over the array:
  *    if the length of the current string < shortest:
  *        shortest = current string
- * 
+ *
  * return shortest
 ******************************************************************************/
 
